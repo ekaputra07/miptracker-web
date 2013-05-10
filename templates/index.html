@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if user %}
+        <div class="well">
+        <h1 class="muted">There's nothing here at the moment.</h1>
+        </div>
+    {% else %}
+        <div class="well" style="text-align:center">
+          <p class="lead muted">Your IP Address is</p>
+          <h1 style="font-size:100px">{{ip}}</h1>
+          <hr>
+          <p class="muted">Accessing from : {{ua}}</p>
+        </div>
+    {% endif %}
+
+    <p class="muted" style="text-align:center">a web service by <a href="http://balitechy.com" title="balitechy.com" target="_blank">balitechy.com</a></p>
+{% endblock %}
+
